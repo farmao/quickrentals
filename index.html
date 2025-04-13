@@ -1,15 +1,125 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>replit</title>
-  <link href="style.css" rel="stylesheet" type="text/css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quick Rentals</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-  Hello world
+  <header>
+    <h1>Quick Rentals</h1>
+    <p>Browse → WhatsApp → Delivered fast across Mumbai</p>
+  </header>
+
+  <section id="how-it-works">
+    <h2>How It Works</h2>
+    <ol>
+      <li>Browse items</li>
+      <li>Check delivery time for your area</li>
+      <li>Order via WhatsApp</li>
+    </ol>
+    <input type="text" id="pincode" placeholder="Enter your pincode" />
+    <button onclick="checkPincode()">Check Delivery Time</button>
+    <p id="delivery-result"></p>
+  </section>
+
+  <section id="categories">
+    <h2>Categories</h2>
+
+    <div class="category">
+      <i class="fa-solid fa-lightbulb category-icon"></i> <!-- Example icon -->
+      <h3>Event Related</h3>
+      <p>Projectors, speakers, disco lights</p>
+      <a href="https://wa.me/919892525821?text=I'm%20interested%20in%20renting%20event-related%20equipment" target="_blank">Order on WhatsApp</a>
+    </div>
+
+    <div class="category">
+      <i class="fa-solid fa-dice category-icon"></i> <!-- Example icon -->
+      <h3>Board & Card Games</h3>
+
+      <div class="slideshow">
+        <div class="product-card">
+          <img src="images/azul.jpg" alt="Azul">
+          <a href="board-games/azul.html">More Description</a>
+          <a href="https://wa.me/91XXXXXXXXXX?text=I'd%20like%20to%20rent%20Azul" target="_blank">Order</a>
+        </div>
+        <div class="product-card">
+          <img src="images/codenames.jpg" alt="Code Name">
+          <a href="board-games/codenames.html">More Description</a>
+          <a href="https://wa.me/91XXXXXXXXXX?text=I'd%20like%20to%20rent%20Code%20Name" target="_blank">Order</a>
+        </div>
+        <div class="product-card">
+          <img src="images/splendor.jpg" alt="Splendor">
+          <a href="board-games/splendor.html">More Description</a>
+          <a href="https://wa.me/91XXXXXXXXXX?text=I'd%20like%20to%20rent%20Splendor" target="_blank">Order</a>
+        </div>
+        <div class="product-card">
+          <img src="images/sequence.jpg" alt="Sequence">
+          <a href="board-games/sequence.html">More Description</a>
+          <a href="https://wa.me/91XXXXXXXXXX?text=I'd%20like%20to%20rent%20Sequence" target="_blank">Order</a>
+        </div>
+      </div>
+      <a href="boardgames.html" class="view-all">All board games →</a>
+
+
+      
+    </div>
+
+    <div class="category">
+      <i class="fa-solid fa-gamepad category-icon"></i> <!-- Example icon -->
+      <h3>Video Gaming</h3>
+      <p>PlayStation, Xbox, Nintendo Switch, controllers</p>
+      <a href="https://wa.me/919892525821?text=I'm%20interested%20in%20renting%20video%20gaming%20equipment" target="_blank">Order on WhatsApp</a>
+    </div>
+
+    <div class="category">
+      <i class="fa-solid fa-football category-icon"></i> <!-- Example icon -->
+      <h3>Sports</h3>
+      <p>Cricket kits, footballs, badminton sets, yoga mats</p>
+      <a href="https://wa.me/919892525821?text=I'm%20interested%20in%20renting%20sports%20items" target="_blank">Order on WhatsApp</a>
+    </div>
+
+    <div class="category">
+      <i class="fa-solid fa-camera category-icon"></i> <!-- Example icon -->
+      <h3>Photography</h3>
+      <p>Cameras, tripods, ring lights</p>
+      <a href="https://wa.me/919892525821?text=I'm%20interested%20in%20renting%20photography%20gear" target="_blank">Order on WhatsApp</a>
+    </div>
+
+    <div class="category">
+      <i class="fa-solid fa-suitcase-rolling category-icon"></i> <!-- Example icon -->
+      <h3>Travel</h3>
+      <p>Backpacks, trolleys, neck pillows, travel adapters</p>
+      <a href="https://wa.me/919892525821?text=I'm%20interested%20in%20renting%20travel%20items" target="_blank">Order on WhatsApp</a>
+    </div>
+
+    <div class="category">
+      <i class="fa-solid fa-chair category-icon"></i> <!-- Example icon -->
+      <h3>Furniture</h3>
+      <p>Bean bags, stools, tables, foldable chairs</p>
+      <a href="https://wa.me/919892525821?text=I'm%20interested%20in%20renting%20furniture" target="_blank">Order on WhatsApp</a>
+    </div>
+
+    <div class="category">
+      <i class="fa-solid fa-masks-theater category-icon"></i> <!-- Example icon -->
+      <h3>Entertainment & Activities</h3>
+      <p>Karaoke mics, VR headsets, party props</p>
+      <a href="https://wa.me/919892525821?text=I'm%20interested%20in%20entertainment%20and%20activity%20rentals" target="_blank">Order on WhatsApp</a>
+    </div>
+
+
+
+    <!-- Duplicate and edit these blocks for each category: Gaming, Sports, Photography, etc. -->
+  </section>
+
+  <footer>
+    <p>Delivery available across Mumbai. ETA depends on your pincode.</p>
+  </footer>
+
   <script src="script.js"></script>
 </body>
 
