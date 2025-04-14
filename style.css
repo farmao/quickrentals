@@ -105,6 +105,29 @@ footer {
   display: block;
   margin: 5px 0;
   text-align: center;
+  padding: 12px 20px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background 0.2s;
+}
+
+.product-card a.more-info {
+  background: #4a90e2;
+  color: white;
+}
+
+.product-card a.more-info:hover {
+  background: #357abd;
+}
+
+.product-card a[href*="wa.me"] {
+  background: #25d366;
+  color: white;
+}
+
+.product-card a[href*="wa.me"]:hover {
+  background: #128C7E;
 }
 
 .view-all {
