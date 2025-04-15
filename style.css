@@ -101,6 +101,22 @@ footer {
   font-size: 1.2em;
 }
 
+.price-tag {
+  font-size: 0.9em;
+  margin-bottom: 10px;
+}
+
+.original-price {
+  color: #666;
+  text-decoration: line-through;
+  margin-right: 8px;
+}
+
+.free-text {
+  color: #25d366;
+  font-weight: 500;
+}
+
 .product-card .button-container {
   display: flex;
   gap: 10px;
