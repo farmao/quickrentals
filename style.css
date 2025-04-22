@@ -156,10 +156,53 @@ footer {
   display: block;
   text-align: right;
   margin-top: 10px;
+  background: #4a90e2 !important;
+  color: white !important;
+}
+
+.view-all:hover {
+  background: #357abd;
+  /* Darker blue on hover */
 }
 
 input,
 button {
   padding: 10px;
   margin: 10px 0;
+}
+
+.slideshow-wrapper {
+  position: relative;
+}
+
+.slideshow {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: 10px;
+  padding: 10px;
+}
+
+/* Arrows styling stays the same */
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1rem;
+  padding: 5px;
+  color: rgba(255, 255, 255, 0.6);
+  background-color: rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  border-radius: 20%;
+  cursor: default;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.arrow.left {
+  left: 5px;
+}
+
+.arrow.right {
+  right: 5px;
 }
