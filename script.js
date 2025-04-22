@@ -8,7 +8,7 @@ function checkPincode() {
   if (fast.includes(pincode)) {
     result.textContent = "We deliver to your area in less than 60 minutes!";
   } else if (medium.includes(pincode)) {
-    result.textContent = "We deliver to your area in less than 4 hours!";
+    result.textContent = "We deliver to your area in less than 4 hours.";
   } else {
     result.textContent = "Sorry, this pincode is not serviceable at the moment. Please check again at a later time.";
   }
