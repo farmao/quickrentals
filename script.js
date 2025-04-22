@@ -1,14 +1,15 @@
 function checkPincode() {
-  const fast = ["400064", "400067", "400092"];
-  const medium = ["400056", "400059"];
+  const fast = ["400064", "400097", "400067", "400101", "400091", "400092", "400066", "400104", "400063", "400065"];
+  const medium = ["400001", "400002", "400003", "400004", "400005", "400006", "400007", "400008", "400009", "400010", "400011", "400012", "400013", "400014", "400015", "400016", "400017", "400018", "400019", "400020", "400021", "400022", "400024", "400025", "400026", "400027", "400028", "400029", "400030", "400031", "400032", "400033", "400034", "400035", "400037", "400042", "400043", "400049", "400050", "400051", "400052", "400053", "400054", "400055", "400056", "400057", "400058", "400059", "400060", "400061", "400063", "400064", "400065", "400066", "400067", "400068", "400069", "400070", "400071", "400072", "400074", "400075", "400076", "400077", "400078", "400079", "400080", "400081", "400082", "400083", "400084", "400085", "400086", "400087", "400088", "400089", "400091", "400092", "400093", "400094", "400095", "400096", "400097", "400098", "400099", "400101", "400102", "400103", "400104"
+  ];
   const pincode = document.getElementById("pincode").value;
   const result = document.getElementById("delivery-result");
 
   if (fast.includes(pincode)) {
-    result.textContent = "We deliver to your area in 30 minutes!";
+    result.textContent = "We deliver to your area in less than 60 minutes!";
   } else if (medium.includes(pincode)) {
-    result.textContent = "Delivery will take around 2 hours.";
+    result.textContent = "We deliver to your area in less than 4 hours!";
   } else {
-    result.textContent = "We deliver within a day to this pincode.";
+    result.textContent = "Sorry, this pincode is not serviceable at the moment. Please check again at a later time.";
   }
 }
