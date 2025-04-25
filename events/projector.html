@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projector</title>
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        .game-details {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .game-header {
+            display: flex;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .game-image {
+            width: 300px;
+            border-radius: 8px;
+        }
+
+        .game-info h1 {
+            margin-top: 0;
+            color: #2c3e50;
+        }
+
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            margin: 30px 0;
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 8px;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: #4a90e2;
+            text-decoration: none;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+
+        .rent-button {
+            background: #25d366;
+            color: white;
+            padding: 8px 12px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.9em;
+            transition: background 0.2s;
+            display: inline-block;
+        }
+
+        .rent-button:hover {
+            background: #128C7E;
+        }
+
+        .description {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+
+        h2,
+        h3 {
+            color: #2c3e50;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="game-details">
+        <a href="../events.html" class="back-link">← Back to Events</a>
+
+        <div class="game-header">
+            <img src="../images/projector.jpg" alt="Projector" class="game-image">
+        </div>
+        <div class="game-info">
+            <h1>Projector</h1>
+            <div class="price-tag">
+                <span class="original-price">₹850</span>
+                <span class="free-text">₹500</span>
+            </div>
+            <div class="button-container" style="margin-top: 20px;">
+                <a href="https://wa.me/919892525821?text=I'd%20like%20to%20rent%20a%20Projector" target="_blank"
+                    class="rent-button">Rent Now</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="description">
+        <h2>Item description</h2>
+        <p>The Portronics Beem 480 is a compact and efficient LED projector designed for immersive home entertainment
+            and casual professional use. Supporting Full HD 1080p resolution, it delivers sharp visuals and rich colors
+            for an engaging viewing experience. Capable of projecting up to 150 inches, it turns any plain wall into a
+            dynamic screen, perfect for movie nights, gaming, or presentations.<br><br>
+
+            Its built-in stereo speakers offer clear sound, while a range of connectivity options—including HDMI, USB,
+            AV, and 3.5mm audio out—ensure compatibility with a wide array of devices like laptops, smartphones,
+            streaming sticks, and consoles. The Beem 480 is built for durability and energy efficiency.<br><br>
+
+            Lightweight and easy to set up, it includes a remote control and intuitive interface for seamless operation.
+            Whether you're setting up an impromptu screening or traveling with a portable presentation tool, the Beem
+            480 balances performance, portability, and affordability in a sleek, user-friendly design.
+
+        </p>
+
+        <h3>Game Features:</h3>
+        <ul>
+            <li>Display Technology: LED</li>
+            <li>Resolution: Full HD 1080p (Supports 1920x1080)</li>
+            <li>Projection Size: Up to 150 inches</li>
+            <li>Built-in Speakers: Yes (Stereo)</li>
+            <li>Connectivity: HDMI, USB, AV, 3.5mm audio out</li>
+            <li>Lamp Life: Up to 30,000 hours</li>
+            <li>Remote Control: Included</li>
+            <li>Portability: Lightweight and travel-friendly</li>
+            <li>Use Cases: Home entertainment, casual gaming, presentations</li>
+            <li>Compatible Devices: Laptops, smartphones, TV sticks, gaming consoles, USB drives</li>
+        </ul>
+    </div>
+
+    <div class="video-section">
+        <h2>How to set it up</h2>
+        <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/f0WZc7tTNl4" title="How to use Portronics Beem 480"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen>
+            </iframe>
+        </div>
+    </div>
+    </div>
+</body>
+
+</html>

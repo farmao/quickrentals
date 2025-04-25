@@ -186,7 +186,7 @@ button {
 /* Arrows styling stays the same */
 .arrow {
   position: absolute;
-  top: 50%;
+  top: 33%;
   transform: translateY(-50%);
   font-size: 1rem;
   padding: 5px;
@@ -206,3 +206,12 @@ button {
 .arrow.right {
   right: 5px;
 }
+
+.category-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  /* spacing between icon, h3, and p */
+}
+
+.category-item h3
