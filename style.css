@@ -215,11 +215,8 @@ button {
   right: 5px;
 }
 
-.category-item {
+ /*.category-item {
   display: flex;
   align-items: center;
   gap: 10px;
-  /* spacing between icon, h3, and p */
-}
-
-.category-item h3
+  /* spacing between icon, h3, and p }*/
