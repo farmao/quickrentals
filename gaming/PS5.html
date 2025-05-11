@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projector</title>
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        .game-details {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .game-header {
+            display: flex;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .game-image {
+            width: 300px;
+            border-radius: 8px;
+        }
+
+        .game-info h1 {
+            margin-top: 0;
+            color: #2c3e50;
+        }
+
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            margin: 30px 0;
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 8px;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: #4a90e2;
+            text-decoration: none;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+
+        .rent-button {
+            background: #25d366;
+            color: white;
+            padding: 8px 12px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.9em;
+            transition: background 0.2s;
+            display: inline-block;
+        }
+
+        .rent-button:hover {
+            background: #128C7E;
+        }
+
+        .description {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+
+        h2,
+        h3 {
+            color: #2c3e50;
+        }
+
+        .additional-option {
+            background: #4a90e2;
+            color: white;
+            padding: 8px 12px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.9em;
+            transition: background 0.2s;
+            display: inline-block;
+            }
+
+        .additional-option:hover {
+            background: #357abd;
+            }
+    </style>
+
+      <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8MST0XFTF0"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-8MST0XFTF0');
+    </script>
+
+    <!-- Meta Pixel Code -->
+    <script>
+        !function (f, b, e, v, n, t, s) {
+            if (f.fbq) return; n = f.fbq = function () {
+                n.callMethod ?
+                n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+            n.queue = []; t = b.createElement(e); t.async = !0;
+            t.src = v; s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '3914026305515369');
+        fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+            src="https://www.facebook.com/tr?id=3914026305515369&ev=PageView&noscript=1" /></noscript>
+    <!-- End Meta Pixel Code -->
+</head>
+
+<body>
+    
+    <div class="game-details">
+        <a href="../gaming/" class="back-link">← Back to Gaming</a>
+
+        <div class="game-header">
+            <img src="../images/PS5.jpg" alt="Projector" class="game-image">
+        </div>
+        <div class="game-info">
+            <h1>Play Station 5</h1>
+            <div class="price-tag">
+                <span class="original-price">₹1500</span>
+                <span class="free-text">₹700</span>
+            </div>
+            <div class="button-container" style="margin-top: 20px;">
+                <a href="https://wa.me/919892525821?text=I'd%20like%20to%20rent%20a%20PS5" target="_blank"
+                    class="rent-button" style="margin-bottom: 10px; display: inline-block;">Rent Now</a>
+                    <!-- <a href="projector-with-screen.html" target="_blank" class="additional-option" style="margin-bottom: 10px; display: inline-block;">With a wall-mounted Screen</a>
+                <a href="projector-with-screen-and-stand.html" target="_blank" class="additional-option" style="margin-bottom: 10px; display: inline-block;">With a Stand-mounted Screen</a>
+            -->
+            </div>
+        </div>
+    </div>
+
+    <div class="description">
+        <h2>Item description</h2>
+        <p>Experience next-level gaming with the PlayStation 5 (PS5) — now available to rent! 
+            Dive into ultra-fast load times, stunning 4K graphics, and ultra-responsive gameplay that puts you right in the action. 
+            Whether you're hosting a gaming night or just want to try out the hottest titles, 
+            the PS5 delivers unmatched performance and immersive fun.<br><br>
+
+            Includes the revolutionary DualSense controller with haptic feedback and adaptive triggers for a truly dynamic feel. 
+            Connect easily via Wi-Fi or HDMI, and enjoy a growing library of top-tier games — from adrenaline-pumping adventures 
+            to competitive online showdowns.<br><br>
+            
+            Sleek, powerful, and easy to set up — rent the PS5 and turn any space into your personal gaming arena.
+
+        </p>
+
+        <h3>Specifications:</h3>
+        <ul>
+            <li>Display Technology: LED</li>
+            <li>Resolution: Full HD 1080p (Supports 1920x1080)</li>
+            <li>Projection Size: Up to 150 inches</li>
+            <li>Built-in Speakers: Yes (Stereo)</li>
+            <li>Connectivity: HDMI, USB, AV, 3.5mm audio out</li>
+            <li>Lamp Life: Up to 30,000 hours</li>
+            <li>Remote Control: Included</li>
+            <li>Portability: Lightweight and travel-friendly</li>
+            <li>Use Cases: Home entertainment, casual gaming, presentations</li>
+            <li>Compatible Devices: Laptops, smartphones, TV sticks, gaming consoles, USB drives</li>
+        </ul>
+
+        <div id="how-it-works">
+            <script src="/../script.js"></script>
+            <h3>How soon I get it?</h2>
+              <input type="text" id="pincode" placeholder="Enter your pincode" />
+              <button onclick="checkPincode()">Check Delivery Time</button>
+              <p id="delivery-result"></p>
+        </div>
+    </div>
+
+    <div class="video-section">
+        <h2>How to set it up</h2>
+        <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/6jSU2q1NKOc" title="How to connect the PS5 to your TV"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen>
+            </iframe>
+        </div>
+    </div>
+</body>
+
+</html>
