@@ -114,6 +114,26 @@
         gtag('config', 'G-8MST0XFTF0');
     </script>
 
+    <!-- Event snippet for Begin checkout conversion page
+    In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+    <script>
+        function gtag_report_conversion(url) {
+            var callback = function () {
+                if (typeof(url) != 'undefined') {
+                window.location = url;
+                }
+            };
+            gtag('event', 'conversion', {
+                'send_to': 'AW-17088660868/_UU9COOnmcsaEISLwdQ_',
+                'value': 1.0,
+                'currency': 'INR',
+                'event_callback': callback
+            });
+            return false;
+            }
+    </script>
+
+
     <!-- Meta Pixel Code -->
     <script>
         !function (f, b, e, v, n, t, s) {
@@ -150,8 +170,8 @@
                 <span class="free-text">₹700/day</span>
             </div>
             <div class="button-container" style="margin-top: 20px;">
-                <a href="https://wa.me/919892525821?text=I'd%20like%20to%20rent%20a%20PS5" target="_blank"
-                    class="rent-button" style="margin-bottom: 10px; display: inline-block;">Rent Now</a>
+                <a href="#" onclick="return gtag_report_conversion('https://wa.me/919892525821?text=I%20want%20to%20rent%20a%20PS5');"
+                    target=false class="rent-button" style="margin-bottom: 10px; display: inline-block;">Rent Now</a>
                     <!-- <a href="projector-with-screen.html" target="_blank" class="additional-option" style="margin-bottom: 10px; display: inline-block;">With a wall-mounted Screen</a>
                 <a href="projector-with-screen-and-stand.html" target="_blank" class="additional-option" style="margin-bottom: 10px; display: inline-block;">With a Stand-mounted Screen</a>
             -->
