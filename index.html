@@ -328,11 +328,19 @@
     <!-- Duplicate and edit these blocks for each category: Gaming, Sports, Photography, etc. -->
   </section>
 
-  <footer>
-    <p>Delivery available across Mumbai. ETA depends on your pincode.</p>
-  </footer>
-
   <script src="script.js"></script>
 </body>
+
+<footer>
+  <div id="footer-placeholder"></div>
+
+<script>
+  fetch('/footer.html')
+    .then(res => res.text())
+    .then(html => {
+      document.getElementById('footer-placeholder').innerHTML = html;
+    });
+</script>
+</footer>
 
 </html>
