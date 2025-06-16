@@ -13,6 +13,13 @@
   <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
   <link rel="manifest" href="images/favicon/site.webmanifest">
 
+  <a href="/cart.html" class="cart-icon">
+  🛒
+  </a>
+
+   <!-- Add to cart -->
+  <script src="/cart.js"></script>
+
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-8MST0XFTF0"></script>
   <script>
@@ -114,8 +121,11 @@
             </div>
             <div class="button-container">
               <a href="events/projector.html" class="more-info">More Info</a>
-              <a href="https://wa.me/919892525821?text=I'd%20like%20to%20rent%20a%20Projector" target="_blank">Rent
+              <div class="bottom-buttons">
+                <a onclick="addToCart('projector', 'Projector', 500)">Add to Cart</a>
+                <a href="https://wa.me/919892525821?text=I'd%20like%20to%20rent%20a%20Projector" target="_blank">Rent
                 Now</a>
+              </div>
             </div>
           </div>
           <div class="product-card">
@@ -127,9 +137,13 @@
             </div>
             <div class="button-container">
               <a href="events/projector-with-screen-and-stand.html" class="more-info">More Info</a>
-              <a href="https://wa.me/919892525821?text=I'd%20like%20to%20rent%20a%20Projector%20with%20a%20Stand-mounted%20Screen"
-                target="_blank">Rent
-                Now</a>
+              <div class="bottom-buttons">
+                <a onclick="addToCart('projector-w-screen', 'Projector with a stand-mounted screen', 800)">Add to Cart</a>
+                <a href="https://wa.me/919892525821?text=I'd%20like%20to%20rent%20a%20Projector%20with%20a%20Stand-mounted%20Screen"
+                  target="_blank">Rent
+                  Now</a>
+                
+              </div>
             </div>
           </div>
           <div class="product-card">
@@ -141,8 +155,11 @@
             </div>
             <div class="button-container">
               <a href="events/speaker.html" class="more-info">More Info</a>
-              <a href="https://wa.me/919892525821?text=I'd%20like%20to%20rent%20a%20Speaker" target="_blank">Rent
-                Now</a>
+              <div class="bottom-buttons">
+                <a onclick="addToCart('speaker', 'Speaker', 200)">Add to Cart</a>
+                <a href="https://wa.me/919892525821?text=I'd%20like%20to%20rent%20a%20Speaker" target="_blank">Rent
+                  Now</a>
+              </div>
             </div>
           </div>
           <div class="product-card">
@@ -154,9 +171,12 @@
             </div>
             <div class="button-container">
               <a href="events/speaker-with-2-mic.html" class="more-info">More Info</a>
-              <a href="https://wa.me/919892525821?text=I'd%20like%20to%20rent%20a%20Karaoke%20With%202%20Mics"
-                target="_blank">Rent
-                Now</a>
+              <div class="bottom-buttons">
+                <a onclick="addToCart('speaker-w-2-mics', 'Karaoke', 300)">Add to Cart</a>
+                <a href="https://wa.me/919892525821?text=I'd%20like%20to%20rent%20a%20Karaoke%20With%202%20Mics"
+                  target="_blank">Rent
+                  Now</a>
+              </div>
             </div>
           </div>
         </div>
@@ -182,9 +202,11 @@
               </div>
               <div class="button-container">
                 <a href="gaming/PS5.html" class="more-info">More Info</a>
-                <a href="#" onclick="return gtag_report_conversion('https://wa.me/919892525821?text=I%20want%20to%20rent%20a%20PS5');"
-          target=false;>Rent
-                  Now</a>
+                <div class="bottom-buttons">
+                  <a onclick="addToCart('ps5', 'PS5', 700)">Add to Cart</a>
+                  <a href="#" onclick="return gtag_report_conversion('https://wa.me/919892525821?text=I%20want%20to%20rent%20a%20PS5');"
+            target=false;>Rent Now</a>
+              </div>
               </div>
             </div>
             <div class="product-card">
@@ -196,8 +218,11 @@
               </div>
               <div class="button-container">
                 <a href="gaming/PS4.html" class="more-info">More Info</a>
-                <a href="https://wa.me/919892525821?text=I'd%20like%20to%20rent%20a%20PS4" target="_blank">Rent
-                  Now</a>
+                <div class="bottom-buttons">
+                  <a onclick="addToCart('ps5', 'PS5', 700)">Add to Cart</a>
+                  <a href="https://wa.me/919892525821?text=I'd%20like%20to%20rent%20a%20PS4" target="_blank">Rent
+                    Now</a>
+              </div>
               </div>
             </div>
             <div class="product-card">
@@ -209,8 +234,12 @@
               </div>
               <div class="button-container">
                 <a href="gaming/Xbox-S.html" class="more-info">More Info</a>
-                <a href="https://wa.me/919892525821?text=I'd%20like%20to%20rent%20an%20X-box%20S" target="_blank">Rent
+                <div class="bottom-buttons">
+                  <a onclick="addToCart('xbos-s', 'X-box S', 800)">Add to Cart</a>
+                  <a href="https://wa.me/919892525821?text=I'd%20like%20to%20rent%20an%20X-box%20S" target="_blank">Rent
                   Now</a>
+
+                </div>
               </div>
             </div>
           </div>
@@ -239,7 +268,10 @@
             </div>
             <div class="button-container">
               <a href="board-games/azul.html" class="more-info">More Info</a>
-              <a href="https://wa.me/919892525821?text=I'd%20like%20to%20rent%20Azul" target="_blank">Rent Now</a>
+              <div class="bottom-buttons">
+                <a onclick="addToCart('azul', 'Azul', 30)">Add to Cart</a>
+                <a href="https://wa.me/919892525821?text=I'd%20like%20to%20rent%20Azul" target="_blank">Rent Now</a>
+              </div>
             </div>
           </div>
           <div class="product-card">
@@ -251,8 +283,11 @@
             </div>
             <div class="button-container">
               <a href="board-games/codenames.html" class="more-info">More Info</a>
-              <a href="https://wa.me/919892525821?text=I'd%20like%20to%20rent%20Code%20Names" target="_blank">Rent
-                Now</a>
+              <div class="bottom-buttons">
+                <a onclick="addToCart('codenames', 'Codenames', 30)">Add to Cart</a>
+                <a href="https://wa.me/919892525821?text=I'd%20like%20to%20rent%20Code%20Names" target="_blank">Rent
+                  Now</a>
+              </div>
             </div>
           </div>
           <div class="product-card">
@@ -264,7 +299,10 @@
             </div>
             <div class="button-container">
               <a href="board-games/splendor.html" class="more-info">More Info</a>
-              <a href="https://wa.me/919892525821?text=I'd%20like%20to%20rent%20Splendor" target="_blank">Rent Now</a>
+              <div class="bottom-buttons">
+                <a onclick="addToCart('splendor', 'Splendor', 30)">Add to Cart</a>
+                <a href="https://wa.me/919892525821?text=I'd%20like%20to%20rent%20Splendor" target="_blank">Rent Now</a>
+              </div>
             </div>
           </div>
           <div class="product-card">
@@ -276,7 +314,10 @@
             </div>
             <div class="button-container">
               <a href="board-games/sequence.html" class="more-info">More Info</a>
-              <a href="https://wa.me/919892525821?text=I'd%20like%20to%20rent%20Sequence" target="_blank">Rent Now</a>
+              <div class="bottom-buttons">
+                <a onclick="addToCart('sequence', 'Sequence', 30)">Add to Cart</a>
+                <a href="https://wa.me/919892525821?text=I'd%20like%20to%20rent%20Sequence" target="_blank">Rent Now</a>
+              </div>
             </div>
           </div>
         </div>
@@ -288,7 +329,7 @@
       <i class="fa-solid fa-camera category-icon"></i> <!-- Example icon -->
       <h3>Photography</h3>
       <p>DSLR, Go-pro, tripods, ring lights, etc.</p>
-      <p>Let us know what you need and get ₹500 off on your first order</p>
+      <p>Let us know what you need and get upto 20% off on your first order</p>
       <a href="https://wa.me/919892525821?text=I'm%20interested%20in%20renting%20photography%20gear"
         target="_blank">Preorder on WhatsApp</a>
     </div>
@@ -297,7 +338,7 @@
       <i class="fa-solid fa-suitcase-rolling category-icon"></i> <!-- Example icon -->
       <h3>Travel</h3>
       <p>Backpacks, trolleys, neck pillows, travel adapters, etc.</p>
-      <p>Let us know what you need and get ₹500 off on your first order</p>
+      <p>Let us know what you need and get upto 20% off on your first order</p>
       <a href="https://wa.me/919892525821?text=I'm%20interested%20in%20renting%20travel%20items"
         target="_blank">Preorder
         on WhatsApp</a>
@@ -307,7 +348,7 @@
       <i class="fa-solid fa-chair category-icon"></i> <!-- Example icon -->
       <h3>Furniture</h3>
       <p>Bean bags, stools, tables, foldable chairs, etc.</p>
-      <p>Let us know what you need and get ₹500 off on your first order</p>
+      <p>Let us know what you need and get upto 20% off on your first order</p>
       <a href="https://wa.me/919892525821?text=I'm%20interested%20in%20renting%20furniture" target="_blank">Preorder
         on
         WhatsApp</a>
@@ -317,7 +358,7 @@
       <i class="fa-solid fa-football category-icon"></i> <!-- Example icon -->
       <h3>Sports</h3>
       <p>Cricket kits, footballs, badminton sets, yoga mats, etc.</p>
-      <p>Let us know what you need and get ₹500 off on your first order</p>
+      <p>Let us know what you need and get upto 20% off on your first order</p>
       <a href="https://wa.me/919892525821?text=I'm%20interested%20in%20renting%20sports%20items"
         target="_blank">Preorder
         on WhatsApp</a>
@@ -329,6 +370,16 @@
   </section>
 
   <script src="script.js"></script>
+
+  <div id="cart-modal" class="modal">
+    <div class="modal-content">
+      <p id="modal-message">Item added to cart!</p>
+      <div class="modal-buttons">
+        <button class="btn-continue" onclick="closeModal()">Continue Shopping</button>
+        <button class="btn-cart" onclick="goToCart()">Go to Cart</button>
+      </div>
+    </div>
+  </div>
 </body>
 
 <footer>

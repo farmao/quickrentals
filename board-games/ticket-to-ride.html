@@ -12,6 +12,10 @@
     <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon/favicon-16x16.png">
     <link rel="manifest" href="../images/favicon/site.webmanifest">
 
+    <a href="/cart.html" class="cart-icon">
+        🛒
+    </a>
+
     <style>
         .game-details {
             max-width: 800px;
@@ -92,6 +96,22 @@
         h3 {
             color: #2c3e50;
         }
+
+        .additional-option {
+            background: #4a90e2;
+            color: white;
+            padding: 8px 12px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.9em;
+            transition: background 0.2s;
+            display: inline-block;
+            }
+
+        .additional-option:hover {
+            background: #357abd;
+            }
     </style>
 
     <!-- Google tag (gtag.js) -->
@@ -139,6 +159,8 @@
                 <span class="free-text">₹30/day</span>
             </div>
             <div class="button-container" style="margin-top: 20px;">
+                <a onclick="addToCart('ticket-to-ride', 'Ticket to Ride: Europe', 30)" 
+                    target="_blank" class="additional-option" style="margin-bottom: 10px; display: inline-block;">Add to Cart</a> 
                 <a href="https://wa.me/919892525821?text=I'd%20like%20to%20rent%20Ticket%20to%20Ride%20:%20Europe"
                     target="_blank" class="rent-button">Rent Now</a>
             </div>

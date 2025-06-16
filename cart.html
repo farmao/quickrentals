@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quick Rentals</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+
+  <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+  <link rel="manifest" href="images/favicon/site.webmanifest">
+
+  <style>
+      .game-details {
+          max-width: 800px;
+          margin: 0 auto;
+          padding: 20px;
+          background: white;
+          border-radius: 12px;
+          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+
+      .game-header {
+          display: flex;
+          gap: 30px;
+          margin-bottom: 30px;
+      }
+
+      .game-image {
+          width: 300px;
+          border-radius: 8px;
+      }
+
+      .game-info h1 {
+          margin-top: 0;
+          color: #2c3e50;
+      }
+
+      .video-container {
+          position: relative;
+          padding-bottom: 56.25%;
+          height: 0;
+          margin: 30px 0;
+      }
+
+      .video-container iframe {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          border-radius: 8px;
+      }
+
+      .back-link {
+          display: inline-block;
+          margin-bottom: 20px;
+          color: #4a90e2;
+          text-decoration: none;
+      }
+
+      .back-link:hover {
+          text-decoration: underline;
+      }
+
+      .rent-button {
+          background: #25d366;
+          color: white;
+          padding: 8px 12px;
+          border-radius: 6px;
+          text-decoration: none;
+          font-weight: 500;
+          font-size: 0.9em;
+          transition: background 0.2s;
+          display: inline-block;
+      }
+
+      .rent-button:hover {
+          background: #128C7E;
+      }
+
+      .description {
+          background: #f8f9fa;
+          padding: 20px;
+          border-radius: 8px;
+          margin: 20px 0;
+      }
+
+      h2,
+      h3 {
+          color: #2c3e50;
+      }
+
+      .additional-option {
+          background: #4a90e2;
+          color: white;
+          padding: 8px 12px;
+          border-radius: 6px;
+          text-decoration: none;
+          font-weight: 500;
+          font-size: 0.9em;
+          transition: background 0.2s;
+          display: inline-block;
+          }
+
+      .additional-option:hover {
+          background: #357abd;
+          }
+  </style>
+
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-8MST0XFTF0"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-8MST0XFTF0');
+  </script>
+
+  <!-- Event snippet for Begin checkout conversion page
+    In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+  <script>
+      function gtag_report_conversion(url) {
+          var callback = function () {
+              if (typeof(url) != 'undefined') {
+              window.location = url;
+              }
+          };
+          gtag('event', 'conversion', {
+              'send_to': 'AW-17088660868/_UU9COOnmcsaEISLwdQ_',
+              'value': 1.0,
+              'currency': 'INR',
+              'event_callback': callback
+          });
+          return false;
+          }
+  </script>
+
+  <!-- Meta Pixel Code -->
+  <script>
+    !function (f, b, e, v, n, t, s) {
+      if (f.fbq) return; n = f.fbq = function () {
+        n.callMethod ?
+          n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+      };
+      if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+      n.queue = []; t = b.createElement(e); t.async = !0;
+      t.src = v; s = b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t, s)
+    }(window, document, 'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1189804459188113');
+    fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=1189804459188113&ev=PageView&noscript=1" /></noscript>
+  <!-- End Meta Pixel Code -->
+
+  <!-- Facebook Domain Verification -->
+  <meta name="facebook-domain-verification" content="xjara8o5lgkjuar3xokob58t11llwd" />
+
+  <!-- Meta Pixel Code 2 - we are using this one for ads -->
+  <script>
+    !function (f, b, e, v, n, t, s) {
+      if (f.fbq) return; n = f.fbq = function () {
+        n.callMethod ?
+        n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+      };
+      if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+      n.queue = []; t = b.createElement(e); t.async = !0;
+      t.src = v; s = b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t, s)
+    }(window, document, 'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '3914026305515369');
+    fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=3914026305515369&ev=PageView&noscript=1" /></noscript>
+  <!-- End Meta Pixel Code -->
+</head>
+
+<body>
+
+  <div class="game-details">
+    <a href="../index.html" class="back-link">← Back to Home</a>
+
+    <header>
+      <h1>Your Cart</h1>
+    </header>
+
+  <section class="category">
+
+    <div id="cart-container"></div>
+    <button onclick="sendToWhatsApp()" target="_blank" class="rent-button" 
+                    style="margin-bottom: 10px; display: inline-block;">Checkout via WhatsApp</button>
+
+    <script>
+      let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+      const itemQtyLimits = {
+      chair: 4,
+      // Add more exceptions here (all others default to 1)
+      };
+
+      function updateCartDisplay() {
+        const container = document.getElementById("cart-container");
+        container.innerHTML = "";
+
+        if (cart.length === 0) {
+          container.innerHTML = "<p>Your cart is empty.</p>";
+          return;
+        }
+
+        let total = 0;
+        let table = "<table><tr><th>Item</th><th>Qty</th><th>Price</th></tr>";
+
+        cart.forEach((item, index) => {
+          const itemTotal = item.qty * item.price;
+          total += itemTotal;
+
+          table += `
+            <tr>
+              <td>${item.name}</td>
+              <td>
+                <button onclick="changeQty(${index}, -1)">−</button>
+                ${item.qty}
+                <button onclick="changeQty(${index}, 1)">+</button>
+              </td>
+              <td>₹${itemTotal}</td>
+            </tr>
+          `;
+        });
+
+        table += `</table><p><strong>Total: ₹${total}</strong></p>`;
+        container.innerHTML = table;
+      }
+
+      function changeQty(index, delta) {
+        const item = cart[index];
+        const maxQty = itemQtyLimits[item.id] || 1; // Default to 1 if not specified
+
+        if (delta > 0 && item.qty >= maxQty) {
+          alert(`Sorry, you can only rent up to ${maxQty} ${item.name}(s) at this moment`);
+          return;
+        }
+
+        item.qty += delta;
+
+        if (item.qty <= 0) {
+          cart.splice(index, 1); // Remove if quantity is 0
+        }
+
+        localStorage.setItem("cart", JSON.stringify(cart));
+        updateCartDisplay();
+      }
+
+      function sendToWhatsApp() {
+        if (cart.length === 0) return alert("Cart is empty!");
+
+        let message = "Hi, I’d like to rent the following items:%0A%0A";
+        cart.forEach(item => {
+          message += `• ${item.name} (x${item.qty}) - ₹${item.price * item.qty}%0A`;
+        });
+        const total = cart.reduce((sum, item) => sum + item.price * item.qty, 0);
+        message += `%0ATotal: ₹${total}%0A%0APlease let me know the availability.`;
+
+        const phone = "919892525821"; // Replace with your WhatsApp number
+        const waUrl = `https://wa.me/${phone}?text=${message}`;
+
+        window.open(waUrl, "_blank");
+      }
+
+      updateCartDisplay();
+    </script>
+  </section>
+</body>
+
+
+
+<footer>
+  <div id="footer-placeholder"></div>
+
+<script>
+  fetch('/footer.html')
+    .then(res => res.text())
+    .then(html => {
+      document.getElementById('footer-placeholder').innerHTML = html;
+    });
+</script>
+</footer>
+
+</html>

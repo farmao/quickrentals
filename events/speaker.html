@@ -12,6 +12,10 @@
     <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon/favicon-16x16.png">
     <link rel="manifest" href="../images/favicon/site.webmanifest">
 
+    <a href="/cart.html" class="cart-icon">
+        🛒
+    </a>
+
     <style>
         .game-details {
             max-width: 800px;
@@ -155,10 +159,12 @@
                 <span class="free-text">₹200/day</span>
             </div>
             <div class="button-container" style="margin-top: 20px;">
-                <a href="https://wa.me/919892525821?text=I'd%20like%20to%20rent%20a%20Speaker" target="_blank"
-                    class="rent-button" style="margin-bottom: 10px; display: inline-block;">Rent Now</a>
+                <a onclick="addToCart('speaker', 'Speaker', 200)" 
+                    target="_blank" class="additional-option" style="margin-bottom: 10px; display: inline-block;">Add to Cart</a> 
                 <a href="speaker-with-1-mic.html" target="_blank" class="additional-option" style="margin-bottom: 10px; display: inline-block;">With 1 Mic</a>
-                <a href="speaker-with-2-mic.html" target="_blank" class="additional-option" style="margin-bottom: 10px; display: inline-block;">With 2 Mics</a>    
+                <a href="speaker-with-2-mic.html" target="_blank" class="additional-option" style="margin-bottom: 10px; display: inline-block;">With 2 Mics</a>
+                <a href="https://wa.me/919892525821?text=I'd%20like%20to%20rent%20a%20Speaker" target="_blank"
+                    class="rent-button" style="margin-bottom: 10px; display: inline-block;">Rent Now</a>  
             </div>
         </div>
     </div>
