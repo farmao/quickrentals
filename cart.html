@@ -199,7 +199,7 @@
     <div id="cart-container"></div>
     <button onclick="sendToWhatsApp()" target="_blank" class="rent-button" 
                     style="margin-bottom: 10px; display: inline-block;">Checkout via WhatsApp</button>
-
+    
     <script>
       let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
@@ -261,7 +261,13 @@
       }
 
       function sendToWhatsApp() {
-        if (cart.length === 0) return alert("Cart is empty!");
+        //if (cart.length === 0) return alert("Cart is empty!");
+
+        if (cart.length === 0) {
+          document.getElementById('modal-message').textContent = `Cart is empty!`;
+          document.getElementById('cart-modal').style.display = 'flex'; // 👈 show the modal
+          return;
+        }
 
         let message = "Hi, I’d like to rent the following items:%0A%0A";
         cart.forEach(item => {
@@ -276,9 +282,24 @@
         window.open(waUrl, "_blank");
       }
 
+      function closeModal() {
+        document.getElementById('cart-modal').style.display = 'none';
+      }  //Defined here because I wasn't able to call the cart.js correctly
+
+
       updateCartDisplay();
     </script>
-  </section>
+  </section> 
+  
+  <div id="cart-modal" class="modal">
+    <div class="modal-content">
+      <p id="modal-message"></p>
+      <div class="modal-buttons">
+        <button class="btn-continue" onclick="closeModal()">Continue Shopping</button>
+      </div>
+    </div>
+  </div>
+
 </body>
 
 
