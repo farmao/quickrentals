@@ -76,7 +76,7 @@ footer {
 
 .product-card {
   width: 220px;
-  height: 500px;
+  height: 460px;
   background: white;
   border-radius: 12px;
   padding: 20px;
@@ -263,7 +263,7 @@ button {
 .cart-icon {
   position: fixed;
   top: 30px;
-  right: 100px;
+  right: 30px;
   background-color: #4a90e2; 
   color: white;
   padding: 8px 12px;
