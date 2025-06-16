@@ -15,7 +15,8 @@
     <a href="/cart.html" class="cart-icon">
         🛒
     </a>
-
+    <script src="../script.js"></script>
+    
     <style>
         .game-details {
             max-width: 800px;
@@ -216,6 +217,18 @@
             </iframe>
         </div>
     </div>
+    </div>
+
+    <script src="../script.js"></script>
+
+    <div id="cart-modal" class="modal">
+        <div class="modal-content">
+        <p id="modal-message">Item added to cart!</p>
+        <div class="modal-buttons">
+            <button class="btn-continue" onclick="closeModal()">Continue Shopping</button>
+            <button class="btn-cart" onclick="goToCart()">Go to Cart</button>
+        </div>
+        </div>
     </div>
 </body>
 
