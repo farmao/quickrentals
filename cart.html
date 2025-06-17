@@ -197,6 +197,17 @@
   <section class="category">
 
     <div id="cart-container"></div>
+
+    <!--<div class="date-picker-container">
+    <label for="start-date">Start Date:</label>
+    <input type="date" id="start-date" name="start-date"  onchange="formatDate(this)">
+
+    <label for="end-date" style="margin-left: 20px;">End Date:</label>
+    <input type="date" id="end-date" name="end-date">
+    </div>
+
+    <p id="rental-days"></p> -->
+
     <button onclick="sendToWhatsApp()" target="_blank" class="rent-button" 
                     style="margin-bottom: 10px; display: inline-block;">Checkout via WhatsApp</button>
     
@@ -218,11 +229,14 @@
         }
 
         let total = 0;
-        let table = "<table><tr><th>Item</th><th>Qty</th><th>Price</th></tr>";
+        let totaldeposit = 0;
+        let table = "<table><tr><th>Item</th><th>Qty</th><th>Price</th><th>Deposit</th></tr>";
 
         cart.forEach((item, index) => {
           const itemTotal = item.qty * item.price;
           total += itemTotal;
+          const itemDeposit = item.qty * item.deposit;
+          totaldeposit += itemDeposit;
 
           table += `
             <tr>
@@ -233,11 +247,12 @@
                 <button onclick="changeQty(${index}, 1)">+</button>
               </td>
               <td>₹${itemTotal}</td>
+              <td>₹${itemDeposit}</td>
             </tr>
           `;
         });
 
-        table += `</table><p><strong>Total: ₹${total}</strong></p>`;
+        table += `</table><p><strong>Rental charges: ₹${total}/day</strong></p><p><strong>Deposit: ₹${totaldeposit}</strong></p>`;
         container.innerHTML = table;
       }
 
@@ -259,6 +274,32 @@
         localStorage.setItem("cart", JSON.stringify(cart));
         updateCartDisplay();
       }
+
+      // const startInput = document.getElementById("start-date");
+      // const endInput = document.getElementById("end-date");
+      // const output = document.getElementById("rental-days");
+
+      // function calculateRentalDays() {
+    //    const startDate = new Date(startInput.value);
+  //      const endDate = new Date(endInput.value);
+
+//        if (startInput.value && endInput.value) {
+          //if (endDate < startDate) {
+        //    output.textContent = "⚠️ End date must be after start date.";
+      //      return;
+    //      }
+
+  //        const timeDiff = endDate.getTime() - startDate.getTime();
+//          const dayDiff = Math.ceil(timeDiff / (30 * 3600 * 24)) ;
+
+        //  output.textContent = `Rental Duration: ${dayDiff} day${dayDiff > 1 ? 's' : ''}`;
+        //} else {
+        //  output.textContent = "";
+        //}
+      //}
+
+  //    startInput.addEventListener("change", calculateRentalDays);
+  //    endInput.addEventListener("change", calculateRentalDays);
 
       function sendToWhatsApp() {
         //if (cart.length === 0) return alert("Cart is empty!");

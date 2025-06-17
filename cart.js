@@ -2,7 +2,7 @@ const itemQtyLimits = {
   chair: 4,
   // add other exceptions here
 };
-function addToCart(id, name, price) {
+function addToCart(id, name, price, deposit=0) {
   let cart = JSON.parse(localStorage.getItem('cart')) || [];
   const maxQty = itemQtyLimits[id] || 1;
 
@@ -17,7 +17,7 @@ function addToCart(id, name, price) {
     }
     cart[itemIndex].qty += 1;
   } else {
-    cart.push({ id: id, name: name, price: price, qty: 1 });
+    cart.push({ id: id, name: name, price: price, qty: 1, deposit: deposit});
   }
 
   localStorage.setItem('cart', JSON.stringify(cart));
@@ -35,8 +35,3 @@ function closeModal() {
 function goToCart() {
   window.location.href = '/cart.html'; // Change path if needed
 }
-
-
-
-
-
