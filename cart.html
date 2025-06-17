@@ -312,12 +312,12 @@
 
         let message = "Hi, I’d like to rent the following items:%0A%0A";
         cart.forEach(item => {
-          message += `• ${item.name} (x${item.qty}) - ₹${item.price * item.qty} + ₹${item.deposit * item.qty} Deposit%0A`;
+          message += `• ${item.name} (x${item.qty})%0A - ₹${item.price * item.qty} %2B ₹${item.deposit * item.qty} (Deposit)%0A`;
         });
         const total = cart.reduce((sum, item) => sum + item.price * item.qty, 0);
         const totaldeposit = cart.reduce((sum, item) => sum + item.deposit * item.qty, 0);
-        
-        message += `%0ATotal: ₹${total} %0A+ Deposit: ₹${totaldeposit} %0APlease let me know the availability.`;
+
+        message += `%0ATotal Rent: ₹${total} %0ADeposit: ₹${totaldeposit} %0APlease let me know the availability.`;
 
         //message += `%0ATotal: ₹${total} %0A+ Deposit: ₹${totaldeposit} %0APlease let me know the availability.`;
         //message += `%0ATotal: ₹${total} + Deposit: ₹${totaldeposit}%0A%0APlease let me know the availability.`;
