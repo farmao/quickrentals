@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-In">
 
 <head>
   <meta charset="UTF-8" />
@@ -12,6 +12,8 @@
   <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
   <link rel="manifest" href="images/favicon/site.webmanifest">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+
 
   <style>
       .game-details {
@@ -198,21 +200,35 @@
 
     <div id="cart-container"></div>
 
-    <!--<div class="date-picker-container">
-    <label for="start-date">Start Date:</label>
-    <input type="date" id="start-date" name="start-date"  onchange="formatDate(this)">
-
-    <label for="end-date" style="margin-left: 20px;">End Date:</label>
-    <input type="date" id="end-date" name="end-date">
+    <div id="date-section" style="display: none;">
+      <label for="startInput"><strong>Start Date:</strong></label>
+      <input id="startInput" placeholder="DD/MM/YYYY">
+      <label for="endInput"><strong>End Date:</strong></label>
+      <input id="endInput" placeholder="DD/MM/YYYY">
+      <p id="output"></p>
     </div>
 
-    <p id="rental-days"></p> -->
+
+    <div id="pincode-section" style="display: none;">
+      <label for="pincodeInput"><strong>Enter Pincode:</strong></label>
+      <input id="pincodeInput" type="text" placeholder="e.g. 560001">
+      <p id="pincodeMessage" style="margin-top: 5px;"></p>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
+    <script>
+      flatpickr("#startInput", {dateFormat: "d/m/Y"});
+      flatpickr("#endInput", {dateFormat: "d/m/Y"});
+    </script>
 
     <button onclick="sendToWhatsApp()" target="_blank" class="rent-button" 
                     style="margin-bottom: 10px; display: inline-block;">Checkout via WhatsApp</button>
     
     <script>
       let cart = JSON.parse(localStorage.getItem("cart")) || [];
+      let total = 0;
+      let totaldeposit = 0;
 
       const itemQtyLimits = {
       chair: 4,
@@ -228,8 +244,9 @@
           return;
         }
 
-        let total = 0;
-        let totaldeposit = 0;
+        total = 0;
+        totaldeposit = 0;
+
         let table = "<table><tr><th>Item</th><th>Qty</th><th>Price</th><th>Deposit</th></tr>";
 
         cart.forEach((item, index) => {
@@ -252,8 +269,11 @@
           `;
         });
 
-        table += `</table><p><strong>Rental charges: ₹${total}/day</strong></p><p><strong>Deposit: ₹${totaldeposit}</strong></p>`;
+        table += `</table><strong>Rental charge:</strong> ₹${total}/day<br><strong>Deposit:</strong> ₹${totaldeposit}</p>`;
         container.innerHTML = table;
+
+        document.getElementById("date-section").style.display = cart.length > 0 ? "block" : "none";
+        calculateRentalDays();        
       }
 
       function changeQty(index, delta) {
@@ -275,31 +295,46 @@
         updateCartDisplay();
       }
 
-      // const startInput = document.getElementById("start-date");
-      // const endInput = document.getElementById("end-date");
-      // const output = document.getElementById("rental-days");
+      const startInput = document.getElementById("startInput");
+      const endInput = document.getElementById("endInput");
+      const output = document.getElementById("output");
 
-      // function calculateRentalDays() {
-    //    const startDate = new Date(startInput.value);
-  //      const endDate = new Date(endInput.value);
+      function calculateRentalDays() {
+        const [startDay, startMonth, startYear] = startInput.value.split("/");
+        const [endDay, endMonth, endYear] = endInput.value.split("/");
 
-//        if (startInput.value && endInput.value) {
-          //if (endDate < startDate) {
-        //    output.textContent = "⚠️ End date must be after start date.";
-      //      return;
-    //      }
+        if (startInput.value && endInput.value) {
+          const startDate = new Date(startYear, startMonth - 1, startDay);
+          const endDate = new Date(endYear, endMonth - 1, endDay);
 
-  //        const timeDiff = endDate.getTime() - startDate.getTime();
-//          const dayDiff = Math.ceil(timeDiff / (30 * 3600 * 24)) ;
+          if (endDate < startDate) {
+            output.textContent = "⚠️ End date must be after start date.";
+            return;
+          }
 
-        //  output.textContent = `Rental Duration: ${dayDiff} day${dayDiff > 1 ? 's' : ''}`;
-        //} else {
-        //  output.textContent = "";
-        //}
-      //}
+          const utcStart = Date.UTC(startDate.getFullYear(), startDate.getMonth(), startDate.getDate());
+          const utcEnd = Date.UTC(endDate.getFullYear(), endDate.getMonth(), endDate.getDate());
+          const dayDiff = Math.max(1, Math.ceil((utcEnd - utcStart) / (1000 * 60 * 60 * 24)));
 
-  //    startInput.addEventListener("change", calculateRentalDays);
-  //    endInput.addEventListener("change", calculateRentalDays);
+          // Calculate total rental cost
+          const totalRentalCost = total * dayDiff; // ✅ use the global value
+          //output.textContent = `Rental Duration: ${dayDiff} day${dayDiff > 1 ? 's' : ''}`;
+          //output.innerHTML = `<strong>Rental Duration:</strong> ${dayDiff} day${dayDiff > 1 ? 's' : ''}`;
+          output.innerHTML = `
+            <strong>Rental Duration:</strong> ${dayDiff} day${dayDiff > 1 ? 's' : ''}<br>
+            <strong>Total Rental charge:</strong> ₹${totalRentalCost}<br>
+            <strong>Total Deposit:</strong> ₹${totaldeposit}<br>
+          `;
+
+          document.getElementById("pincode-section").style.display = "block";
+
+        } else {
+          output.textContent = "";
+        }
+      }
+
+      startInput.addEventListener("change", calculateRentalDays);
+      endInput.addEventListener("change", calculateRentalDays);
 
       function sendToWhatsApp() {
         //if (cart.length === 0) return alert("Cart is empty!");
@@ -311,16 +346,62 @@
         }
 
         let message = "Hi, I’d like to rent the following items:%0A%0A";
+        // 1️⃣ Items list with daily rent & deposit
         cart.forEach(item => {
           message += `• ${item.name} (x${item.qty})%0A - ₹${item.price * item.qty} %2B ₹${item.deposit * item.qty} (Deposit)%0A`;
         });
-        const total = cart.reduce((sum, item) => sum + item.price * item.qty, 0);
-        const totaldeposit = cart.reduce((sum, item) => sum + item.deposit * item.qty, 0);
 
-        message += `%0ATotal Rent: ₹${total} %0ADeposit: ₹${totaldeposit} %0APlease let me know the availability.`;
 
-        //message += `%0ATotal: ₹${total} %0A+ Deposit: ₹${totaldeposit} %0APlease let me know the availability.`;
-        //message += `%0ATotal: ₹${total} + Deposit: ₹${totaldeposit}%0A%0APlease let me know the availability.`;
+        const startDate = startInput.value.trim();
+        const endDate = endInput.value.trim();
+
+        let rentalDays = 1;
+        if (startDate && endDate) {
+          const [startDay, startMonth, startYear] = startDate.split("/");
+          const [endDay, endMonth, endYear] = endDate.split("/");
+          const start = new Date(startYear, startMonth - 1, startDay);
+          const end = new Date(endYear, endMonth - 1, endDay);
+
+          if (end >= start) {
+            const utcStart = Date.UTC(start.getFullYear(), start.getMonth(), start.getDate());
+            const utcEnd = Date.UTC(end.getFullYear(), end.getMonth(), end.getDate());
+            rentalDays = Math.max(1, Math.ceil((utcEnd - utcStart) / (1000 * 60 * 60 * 24)));
+          }
+        }
+
+        const totalRentalCost = total * rentalDays;       
+
+        // 2️⃣ Rental dates and duration
+        message += `%0AI'd like to rent these for ${rentalDays} day${rentalDays > 1 ? 's,' : ','}`;
+        message += ` from ${endDate}`;
+        message += ` to ${endDate}`;
+
+        const pincode = pincodeInput.value.trim();
+        const info = deliveryZones[pincode];
+
+
+        // 4️⃣ Delivery info
+        message += `%0AI live in ${pincode}`;
+
+        // 3️⃣ Rental totals
+        message += `%0ATotal Rental charge: ₹${totalRentalCost}`;
+        message += `%0ATotal Deposit: ₹${totaldeposit}`;
+
+          const deliveryTimes = {
+            0: '2 hour',
+            1: '4 to 6 hour',
+            2: '8 hour'
+          };
+
+
+        if (info && info.available === true) {
+          message += `%0ADelivery Charge: ₹${info.charge}`;
+          message += `%0ADelivery Time: ${deliveryTimes[info.fast] || 'Unspecified'}`;
+        } else {
+          message += `%0ADelivery not available in this pincode, but`;
+        }
+
+        message += `%0A%0APlease let me know the availability.`;
 
         const phone = "919892525821"; // Replace with your WhatsApp number
         const waUrl = `https://wa.me/${phone}?text=${message}`;
@@ -328,10 +409,87 @@
         window.open(waUrl, "_blank");
       }
 
+      const pincodeInput = document.getElementById("pincodeInput");
+      const pincodeMessage = document.getElementById("pincodeMessage");
+
+      const freefastDeliveryZones = ["400062", "400063",  "400064", "400065", "400066", "400067",
+                                      "400090", "400091", "400092", "400101", "400104"];
+      
+      const freeslowDeliveryZones = ["400001", "400002", "400003", "400004", "400005", "400006", "400007", "400008", "400009", "400010", 
+                                    "400011", "400012", "400013", "400014", "400015", "400016", "400017", "400018", "400019", 
+                                    "400020", "400021", "400022", "400024", "400025", "400026", "400027", "400028", "400029", 
+                                    "400030", "400031", "400032", "400033", "400034", "400035", "400037", "400042", "400043", 
+                                    "400049", "400050", "400051", "400052", "400053", "400054", "400055", "400056", "400057", 
+                                    "400058", "400059", "400060", "400061", 
+                                    "400068", "400069", "400070", "400071", "400072", "400074", "400075", "400076", "400077", 
+                                    "400078", "400079", "400080", "400081", "400082", "400083", "400084", "400085", "400086", 
+                                    "400087", "400088", "400089", "400093", "400094", "400095", "400096", 
+                                    "400098", "400099", "400102", "400103"];
+      const paidDeliveryZones100 = ["400068","401107","401104","401101","401105","401207","401201","401202","401208","401203", //Mira road to Virar
+                                  "401209","401303","401305"];
+
+      const paidDeliveryZones200 = ["400703","400705","400709","400701","400708","400706","400614","410210","410209","410218", //Navi Mumbai
+                                  "410208","410206","410221",
+                                  "400601","400602","400603","400604","400605","400606","400607","400608","400612","400615" //Thane
+                                  ];
+
+      const deliveryZones = {};
+
+      freefastDeliveryZones.forEach(pincode => {
+        deliveryZones[pincode] = { available: true, charge: 0, fast: 0 };
+      });
+
+      freeslowDeliveryZones.forEach(pincode => {
+        deliveryZones[pincode] = { available: true, charge: 0, fast: 1 };
+      });
+      
+      paidDeliveryZones100.forEach(pincode => {
+        deliveryZones[pincode] = { available: true, charge: 100, fast: 2  };
+      });
+
+      paidDeliveryZones200.forEach(pincode => {
+        deliveryZones[pincode] = { available: true, charge: 200, fast: 2  };
+      });
+
+      pincodeInput.addEventListener("input", () => {
+      const pincode = pincodeInput.value.trim();
+      const info = deliveryZones[pincode];
+
+      if (!pincode) {
+        pincodeMessage.textContent = "";
+      } else if (pincode.length < 6)  {
+        pincodeMessage.textContent = "Enter a valid pin code ";
+        return
+      }  else if (pincode.length = 6)  {
+        pincodeMessage.textContent = "";
+        
+      }  else if (pincode.length > 6)  {
+        pincodeMessage.textContent = "Enter a valid pin code "
+        return;
+      };
+
+      if (pincode.length > 6)  {
+        pincodeMessage.textContent = "Enter a valid pin code "
+        return;
+      };
+
+
+
+      if (!info || info.available !== true) {
+        pincodeMessage.innerHTML = `<strong>We currently do not deliver to this pincode.</strong>`;
+      } else if (info.charge === 0 && info.fast === 0 ) {
+        pincodeMessage.innerHTML = `<strong> Free 2 hour delivery!</strong>`;
+      } else if (info.charge === 0 && info.fast === 1 ) {
+        pincodeMessage.innerHTML = `<strong> Free 4-6 hour delivery!</strong>`;
+      } else {
+        pincodeMessage.innerHTML = `<strong> We can deliver within 8 hours. Delivery + Pickup charges: </strong> ₹${info.charge}`;
+      }
+      });
+
+
       function closeModal() {
         document.getElementById('cart-modal').style.display = 'none';
       }  //Defined here because I wasn't able to call the cart.js correctly
-
 
       updateCartDisplay();
     </script>
