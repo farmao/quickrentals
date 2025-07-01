@@ -479,9 +479,9 @@
       if (!info || info.available !== true) {
         pincodeMessage.innerHTML = `<strong>We currently do not deliver to this pincode.</strong>`;
       } else if (info.charge === 0 && info.fast === 0 ) {
-        pincodeMessage.innerHTML = `<strong> Free 2 hour delivery!</strong>`;
+        pincodeMessage.innerHTML = `<strong> Free 1 hour delivery!</strong>`;
       } else if (info.charge === 0 && info.fast === 1 ) {
-        pincodeMessage.innerHTML = `<strong> Free 4-6 hour delivery!</strong>`;
+        pincodeMessage.innerHTML = `<strong> Free 4 hour delivery!</strong>`;
       } else {
         pincodeMessage.innerHTML = `<strong> We can deliver within 8 hours. Delivery + Pickup charges: </strong> ₹${info.charge}`;
       }
