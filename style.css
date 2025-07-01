@@ -345,11 +345,11 @@ button {
 
 /* Set specific widths */
 .cart-table th.item-col, .cart-table td.item-col {
-  width: 35%;
+  width: 30%;
 }
 
 .cart-table th.qty-col, .cart-table td.qty-col {
-  width: 25%;
+  width: 30%;
 }
 
 .cart-table th.price-col, .cart-table td.price-col {
@@ -363,7 +363,7 @@ button {
 /* Make buttons smaller */
 .qty-btn {
   padding: 2px 6px;
-  font-size: 12px;
+  font-size: 8px;
   margin: 0 2px;
 }
 
