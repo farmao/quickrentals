@@ -331,20 +331,39 @@ button {
 
 .cart-table {
   width: 100%;
-  table-layout: fixed;
+  table-layout: fixed;  /* very important to make widths work */
 }
 
 .cart-table th, .cart-table td {
-  text-align: center;          /* center-align all header & data cells */
-  vertical-align: middle;     /* keep content vertically centered */
+  text-align: center;
+  vertical-align: middle;
 }
 
 .cart-table td:first-child, .cart-table th:first-child {
-  text-align: left;           /* keep the Item column left-aligned */
+  text-align: left;
 }
 
+/* Set specific widths */
+.cart-table th.item-col, .cart-table td.item-col {
+  width: 35%;
+}
+
+.cart-table th.qty-col, .cart-table td.qty-col {
+  width: 25%;
+}
+
+.cart-table th.price-col, .cart-table td.price-col {
+  width: 20%;
+}
+
+.cart-table th.deposit-col, .cart-table td.deposit-col {
+  width: 20%;
+}
+
+/* Make buttons smaller */
 .qty-btn {
   padding: 2px 6px;
   font-size: 12px;
   margin: 0 2px;
 }
+
