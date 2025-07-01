@@ -328,3 +328,23 @@ button {
 .btn-cart:hover {
   background-color: #25d366;
 }
+
+.cart-table {
+  width: 100%;
+  table-layout: fixed;
+}
+
+.cart-table th, .cart-table td {
+  text-align: center;          /* center-align all header & data cells */
+  vertical-align: middle;     /* keep content vertically centered */
+}
+
+.cart-table td:first-child, .cart-table th:first-child {
+  text-align: left;           /* keep the Item column left-aligned */
+}
+
+.qty-btn {
+  padding: 2px 6px;
+  font-size: 12px;
+  margin: 0 2px;
+}

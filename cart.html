@@ -250,13 +250,15 @@
 
         //let table = "<table><tr><th>Item</th><th>Qty</th><th>Price</th><th>Deposit</th></tr>";
 
-        let table = `<table style="width: 100%; table-layout: fixed;">
+        let table = `
+                    <table class="cart-table">
                       <tr>
-                        <th style="width: 40%;">Item</th>
-                        <th style="width: 30%;">Qty</th>
-                        <th style="width: 15%;">Price</th>
-                        <th style="width: 15%;">Deposit</th>
+                        <th>Item</th>
+                        <th>Qty</th>
+                        <th>Price</th>
+                        <th>Deposit</th>
                       </tr>`;
+
 
         cart.forEach((item, index) => {
           const itemTotal = item.qty * item.price;
@@ -265,18 +267,17 @@
           totaldeposit += itemDeposit;
 
           table += `
-            <tr>
-              <td>${item.name}</td>
-              <td>
-                <button onclick="changeQty(${index}, -1)">−</button>
-                ${item.qty}
-                <button onclick="changeQty(${index}, 1)">+</button>
-              </td>
-              <td>₹${itemTotal}</td>
-              <td>₹${itemDeposit}</td>
-            </tr>
-          `;
-        });
+                <tr>
+                  <td>${item.name}</td>
+                  <td>
+                    <button class="qty-btn" onclick="changeQty(${index}, -1)">−</button>
+                    ${item.qty}
+                    <button class="qty-btn" onclick="changeQty(${index}, 1)">+</button>
+                  </td>
+                  <td>₹${itemTotal}</td>
+                  <td>₹${itemDeposit}</td>
+                </tr>`;
+                      });
 
         table += `</table><strong>Rental charge:</strong> ₹${total}/day<br><strong>Deposit:</strong> ₹${totaldeposit}</p>`;
         container.innerHTML = table;
