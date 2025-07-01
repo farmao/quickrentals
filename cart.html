@@ -251,13 +251,13 @@
         //let table = "<table><tr><th>Item</th><th>Qty</th><th>Price</th><th>Deposit</th></tr>";
 
         let table = `
-                    <table class="cart-table">
-                      <tr>
-                        <th>Item</th>
-                        <th>Qty</th>
-                        <th>Price</th>
-                        <th>Deposit</th>
-                      </tr>`;
+                  <table class="cart-table">
+                    <tr>
+                      <th class="item-col">Item</th>
+                      <th class="qty-col">Qty</th>
+                      <th class="price-col">Price</th>
+                      <th class="deposit-col">Deposit</th>
+                    </tr>`;
 
 
         cart.forEach((item, index) => {
@@ -267,16 +267,16 @@
           totaldeposit += itemDeposit;
 
           table += `
-                <tr>
-                  <td>${item.name}</td>
-                  <td>
-                    <button class="qty-btn" onclick="changeQty(${index}, -1)">−</button>
-                    ${item.qty}
-                    <button class="qty-btn" onclick="changeQty(${index}, 1)">+</button>
-                  </td>
-                  <td>₹${itemTotal}</td>
-                  <td>₹${itemDeposit}</td>
-                </tr>`;
+            <tr>
+              <td class="item-col">${item.name}</td>
+              <td class="qty-col">
+                <button class="qty-btn" onclick="changeQty(${index}, -1)">−</button>
+                ${item.qty}
+                <button class="qty-btn" onclick="changeQty(${index}, 1)">+</button>
+              </td>
+              <td class="price-col">₹${itemTotal}</td>
+              <td class="deposit-col">₹${itemDeposit}</td>
+            </tr>`;
                       });
 
         table += `</table><strong>Rental charge:</strong> ₹${total}/day<br><strong>Deposit:</strong> ₹${totaldeposit}</p>`;
