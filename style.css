@@ -362,8 +362,8 @@ button {
 
 /* Make buttons smaller */
 .qty-btn {
-  padding: 2px 4px;
-  font-size: 8px;
+  padding: 2px 2px;
+  font-size: 12px;
   margin: 0 2px;
 }
 
