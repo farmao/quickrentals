@@ -1,5 +1,6 @@
 const itemQtyLimits = {
   chair: 4,
+  'ps5-controller': 3,
   // add other exceptions here
 };
 function addToCart(id, name, price, deposit=0) {

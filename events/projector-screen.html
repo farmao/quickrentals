@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PS5</title>
+    <title>Projector screen</title>
     <link rel="stylesheet" href="../style.css">
 
     <link rel="apple-touch-icon" sizes="180x180" href="../images/favicon/apple-touch-icon.png">
@@ -18,7 +18,7 @@
 
     <!-- Add to cart -->
     <script src="/cart.js"></script>
-    
+
     <style>
         .game-details {
             max-width: 800px;
@@ -110,14 +110,15 @@
             font-size: 0.9em;
             transition: background 0.2s;
             display: inline-block;
-            }
+        }
 
         .additional-option:hover {
             background: #357abd;
-            }
+        }
+
     </style>
 
-      <!-- Google tag (gtag.js) -->
+    <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-8MST0XFTF0"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -126,27 +127,7 @@
 
         gtag('config', 'G-8MST0XFTF0');
     </script>
-
-    <!-- Event snippet for Begin checkout conversion page
-    In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
-    <script>
-        function gtag_report_conversion(url) {
-            var callback = function () {
-                if (typeof(url) != 'undefined') {
-                window.location = url;
-                }
-            };
-            gtag('event', 'conversion', {
-                'send_to': 'AW-17088660868/_UU9COOnmcsaEISLwdQ_',
-                'value': 1.0,
-                'currency': 'INR',
-                'event_callback': callback
-            });
-            return false;
-            }
-    </script>
-
-
+    
     <!-- Meta Pixel Code -->
     <script>
         !function (f, b, e, v, n, t, s) {
@@ -169,75 +150,32 @@
 </head>
 
 <body>
-    
     <div class="game-details">
-        <a href="../gaming.html" class="back-link">← Back to Gaming</a>
+        <a href="../events.html" class="back-link">← Back to Events</a>
 
         <div class="game-header">
-            <img src="../images/PS5.jpg" alt="Projector" class="game-image">
+            <img src="../images/projector-screen.jpg" alt="Projector Screen" class="game-image">
         </div>
         <div class="game-info">
-            <h1>Play Station 5</h1>
+            <h1>Projector Screen</h1>
             <div class="price-tag">
-                <span class="original-price">₹1500</span>
-                <span class="free-text">₹700/day</span>
+                <span class="original-price">₹1000</span>
+                <span class="free-text">₹600/day</span>
             </div>
             <div class="button-container" style="margin-top: 20px;">
-                <a onclick="addToCart('ps5', 'Playstation 5 (1 Controller included)', 700, 5000)" target="_blank" class="additional-option" style="margin-bottom: 10px; display: inline-block;">Add to Cart</a>
-                <a href="PS5-controller.html" target="_blank" class="additional-option" style="margin-bottom: 10px; display: inline-block;">Extra Controller</a>
-                <a href="#" onclick="return gtag_report_conversion('https://wa.me/919892525821?text=I%20want%20to%20rent%20a%20PS5');"
-                    target=false class="rent-button" style="margin-bottom: 10px; display: inline-block;">Rent Now</a>
+                <a onclick="addToCart('projector-screen', 'Projector Screen', 600, 1000)" 
+                    target="_blank" class="additional-option" style="margin-bottom: 10px; display: inline-block;">Add to Cart</a>
+                <a href="https://wa.me/919892525821?text=I'd%20like%20to%20rent%20a%20Projector%20screen"
+                    target="_blank" class="rent-button">Rent Now</a>
             </div>
         </div>
     </div>
 
     <div class="description">
         <h2>Item description</h2>
-        <p>Experience next-level gaming with the PlayStation 5 (PS5) — now available to rent! 
-            Dive into ultra-fast load times, stunning 4K graphics, and ultra-responsive gameplay that puts you right in the action. 
-            Whether you're hosting a gaming night or just want to try out the hottest titles, 
-            the PS5 delivers unmatched performance and immersive fun.<br><br>
-
-            Includes the revolutionary DualSense controller with haptic feedback and adaptive triggers for a truly dynamic feel. 
-            Connect easily via Wi-Fi or HDMI, and enjoy a growing library of top-tier games — from adrenaline-pumping adventures 
-            to competitive online showdowns.<br><br>
-            
-            Sleek, powerful, and easy to set up — rent the PS5 and turn any space into your personal gaming arena.
-
+        <p>The Screen is 4' x 6' with matte texture. It is to be mounted on the wall using a hook.<br><br>
+            The Stand Mount is a tripod which extends upto 8'.
         </p>
-
-        <h3>Specifications:</h3>
-        <ul>
-            <li>Display Technology: LED</li>
-            <li>Resolution: Full HD 1080p (Supports 1920x1080)</li>
-            <li>Projection Size: Up to 150 inches</li>
-            <li>Built-in Speakers: Yes (Stereo)</li>
-            <li>Connectivity: HDMI, USB, AV, 3.5mm audio out</li>
-            <li>Lamp Life: Up to 30,000 hours</li>
-            <li>Remote Control: Included</li>
-            <li>Portability: Lightweight and travel-friendly</li>
-            <li>Use Cases: Home entertainment, casual gaming, presentations</li>
-            <li>Compatible Devices: Laptops, smartphones, TV sticks, gaming consoles, USB drives</li>
-        </ul>
-
-        <div id="how-it-works">
-            <script src="/../script.js"></script>
-            <h3>How soon I get it?</h2>
-              <input type="text" id="pincode" placeholder="Enter your pincode" />
-              <button onclick="checkPincode()">Check Delivery Time</button>
-              <p id="delivery-result"></p>
-        </div>
-    </div>
-
-    <div class="video-section">
-        <h2>How to set it up</h2>
-        <div class="video-container">
-            <iframe src="https://www.youtube.com/embed/6jSU2q1NKOc" title="How to connect the PS5 to your TV"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen>
-            </iframe>
-        </div>
     </div>
 
     <script src="../script.js"></script>
