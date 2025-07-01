@@ -248,7 +248,15 @@
         total = 0;
         totaldeposit = 0;
 
-        let table = "<table><tr><th>Item</th><th>Qty</th><th>Price</th><th>Deposit</th></tr>";
+        //let table = "<table><tr><th>Item</th><th>Qty</th><th>Price</th><th>Deposit</th></tr>";
+
+        let table = `<table style="width: 100%; table-layout: fixed;">
+                      <tr>
+                        <th style="width: 50%;">Item</th>
+                        <th style="width: 20%;">Qty</th>
+                        <th style="width: 15%;">Price</th>
+                        <th style="width: 15%;">Deposit</th>
+                      </tr>`;
 
         cart.forEach((item, index) => {
           const itemTotal = item.qty * item.price;
