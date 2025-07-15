@@ -12,12 +12,6 @@
     <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon/favicon-16x16.png">
     <link rel="manifest" href="../images/favicon/site.webmanifest">
 
-    <a href="/cart.html" class="cart-icon">
-        🛒
-    </a>
-    <!-- Add to cart -->
-    <script src="/cart.js"></script>
-
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-8MST0XFTF0"></script>
     <script>
@@ -128,22 +122,6 @@
         h3 {
             color: #2c3e50;
         }
-
-        .additional-option {
-            background: #4a90e2;
-            color: white;
-            padding: 8px 12px;
-            border-radius: 6px;
-            text-decoration: none;
-            font-weight: 500;
-            font-size: 0.9em;
-            transition: background 0.2s;
-            display: inline-block;
-        }
-
-        .additional-option:hover {
-            background: #357abd;
-        }
     </style>
 </head>
 
@@ -157,11 +135,10 @@
         <div class="game-info">
             <h1>Projector (with a stand-mounted screen)</h1>
             <div class="price-tag">
-                <span class="original-price">₹1300</span>
-                <span class="free-text">₹800/day</span>
+                <span class="original-price">₹1500</span>
+                <span class="free-text">₹1000/day</span>
             </div>
             <div class="button-container" style="margin-top: 20px;">
-                <a onclick="addToCart('projector-w-screen', 'Projector with a stand-mounted screen', 800, 3000)" target="_blank" class="additional-option" style="margin-bottom: 10px; display: inline-block;">Add to Cart</a>
                 <a href="https://wa.me/919892525821?text=I'd%20like%20to%20rent%20a%20Projector%20with%20a%20screen%20on%20a%20stand"
                     target="_blank" class="rent-button">Rent Now</a>
             </div>
@@ -218,18 +195,6 @@
             </iframe>
         </div>
     </div>
-    </div>
-
-    <script src="../script.js"></script>
-
-    <div id="cart-modal" class="modal">
-        <div class="modal-content">
-        <p id="modal-message">Item added to cart!</p>
-        <div class="modal-buttons">
-            <button class="btn-continue" onclick="closeModal()">Continue Shopping</button>
-            <button class="btn-cart" onclick="goToCart()">Go to Cart</button>
-        </div>
-        </div>
     </div>
 </body>
 

@@ -13,13 +13,6 @@
   <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
   <link rel="manifest" href="images/favicon/site.webmanifest">
 
-  <a href="/cart.html" class="cart-icon">
-  🛒
-  </a>
-
-   <!-- Add to cart -->
-  <script src="/cart.js"></script>
-
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-8MST0XFTF0"></script>
   <script>
@@ -74,7 +67,7 @@
   </div>
 
   <header>
-    <h1>Quick Gaming</h1>
+    <h1>All Gaming Consoles</h1>
     <p>Explore and rent any of our gaming consoles.</p>
   </header>
 
@@ -82,38 +75,32 @@
     <div class="all-products">
       <div class="product-card">
         <img src="images/PS5.jpg" alt="PS5">
-        <h4>Play Station 5 (With 1 Controller)</h4>
+        <h4>PS5</h4>
         <div class="price-tag">
-          <span class="original-price">₹1200</span>
-          <span class="free-text">₹600/day</span>
+          <span class="original-price">₹1500</span>
+          <span class="free-text">₹700/day</span>
         </div>
         <div class="button-container">
           <a href="gaming/PS5.html" class="more-info">More Info</a>
-          <div class="bottom-buttons">
-            <a onclick="addToCart('ps5', 'PS5', 600, 5000)">Add to Cart</a>
-            <a href="#" onclick="return gtag_report_conversion('https://wa.me/919892525821?text=I%20want%20to%20rent%20a%20PS5');"
-            target=false;>Rent Now</a>
-          </div>
+          <a href="#" onclick="return gtag_report_conversion('https://wa.me/919892525821?text=I%20want%20to%20rent%20a%20PS5');"
+          target=false;>Rent Now</a>
         </div>
       </div>
 
       <div class="product-card">
-        <img src="images/PS5-controller.jpg" alt="PS5 Controller">
-        <h4>Extra PS5 Dualsense controllers</h4>
+        <img src="images/PS5-controller.jpg" alt="PS5">
+        <h4>Play Station 5 DualSense Controller</h4>
         <div class="price-tag">
           <span class="original-price">₹200</span>
           <span class="free-text">₹150/day</span>
         </div>
         <div class="button-container">
           <a href="gaming/PS5-controller.html" class="more-info">More Info</a>
-          <div class="bottom-buttons">
-            <a onclick="addToCart('ps5-controller', 'PS5 Controller', 150, 500)">Add to Cart</a>
-            <a href="#" onclick="return gtag_report_conversion('https://wa.me/919892525821?text=I%20want%20to%20rent%20PS5%20Controllers');"
-            target=false;>Rent Now</a>
-          </div>
+          <a href="#" onclick="return gtag_report_conversion('https://wa.me/919892525821?text=I%20want%20to%20rent%20a%20PS5%20controller');"
+    target=false;>Rent
+            Now</a>
         </div>
       </div>
-
       <div class="product-card">
         <img src="images/PS4.jpg" alt="PS4">
         <h4>PS4</h4>
@@ -123,10 +110,7 @@
         </div>
         <div class="button-container">
           <a href="gaming/PS4.html" class="more-info">More Info</a>
-          <div class="bottom-buttons">
-            <a onclick="addToCart('ps4', 'Playstation 4', 450, 3000)">Add to Cart</a>
-            <a href="https://wa.me/919892525821?text=I'd%20like%20to%20rent%20PS4" target="_blank">Rent Now</a>
-          </div>
+          <a href="https://wa.me/919892525821?text=I'd%20like%20to%20rent%20PS4" target="_blank">Rent Now</a>
         </div>
       </div>
 
@@ -138,37 +122,21 @@
           <span class="free-text">₹800/day</span>
         </div>
         <div class="button-container">
-          <a href="gaming/Xbox-S.html" class="more-info">More Info</a>
-          <div class="bottom-buttons">
-            <a onclick="addToCart('xboxs', 'XBox S', 800, 6000)">Add to Cart</a>
-            <a href="https://wa.me/919892525821?text=I'd%20like%20to%20rent%20an%20X-box%20S" target="_blank">Rent Now</a>
-          </div>
+          <a href="board-games/splendor.html" class="more-info">More Info</a>
+          <a href="https://wa.me/919892525821?text=I'd%20like%20to%20rent%20Splendor" target="_blank">Rent Now</a>
         </div>
       </div>
     </div>
 
     <div class="category">
       <h3>Did not find what you are looking for?</h3>
-      <p>Let us know what you need, and get 20% off on your first order.</p>
+      <p>Let us know what you need, and get ₹500 off on your first order.</p>
       <a href="https://wa.me/919892525821?text=I'm%20interested%20in%20renting" target="_blank">Preorder
         on WhatsApp</a>
     </div>
 
     <!-- Add the remaining games below similarly... -->
   </section>
-
-  <script src="script.js"></script>
-
-  <div id="cart-modal" class="modal">
-    <div class="modal-content">
-      <p id="modal-message">Item added to cart!</p>
-      <div class="modal-buttons">
-        <button class="btn-continue" onclick="closeModal()">Continue Shopping</button>
-        <button class="btn-cart" onclick="goToCart()">Go to Cart</button>
-      </div>
-    </div>
-  </div>
-
 
 </body>
 
