@@ -33,11 +33,11 @@ footer {
   transition: transform 0.2s;
 }
 
-.category:hover {
+/*.category:hover {
   transform: translateY(-2px);
-}
+}*/
 
-.category h3 {
+.category h2 {
   color: #2c3e50;
   margin-bottom: 15px;
 }
@@ -54,9 +54,9 @@ footer {
   transition: background 0.2s;
 }
 
-.category a:hover {
+/*.category a:hover {
   background: #128C7E;
-}
+}*/
 
 
 .all-products {
@@ -87,9 +87,9 @@ footer {
   justify-content: space-between;
 }
 
-.product-card:hover {
+/*.product-card:hover {
   transform: translateY(-5px);
-}
+}*/
 
 .product-card img {
   width: 220px;
@@ -99,7 +99,7 @@ footer {
   margin-bottom: 15px;
 }
 
-.product-card h4 {
+.product-card h3 {
   color: #2c3e50;
   margin: 10px 0;
   font-size: 1.2em;
