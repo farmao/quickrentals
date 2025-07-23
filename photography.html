@@ -1,0 +1,129 @@
+<!-- boardgames.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Photography - Quick Rentals</title>
+  <link rel="stylesheet" href="style.css" />
+
+  <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+  <link rel="manifest" href="images/favicon/site.webmanifest">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-8MST0XFTF0"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-8MST0XFTF0');
+  </script>
+
+  <script>
+      function gtag_report_conversion(url) {
+          var callback = function () {
+              if (typeof(url) != 'undefined') {
+              window.location = url;
+              }
+          };
+          gtag('event', 'conversion', {
+              'send_to': 'AW-17088660868/_UU9COOnmcsaEISLwdQ_',
+              'value': 1.0,
+              'currency': 'INR',
+              'event_callback': callback
+          });
+          return false;
+          }
+  </script>
+
+  <!-- Meta Pixel Code -->
+  <script>
+    !function (f, b, e, v, n, t, s) {
+      if (f.fbq) return; n = f.fbq = function () {
+        n.callMethod ?
+        n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+      };
+      if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+      n.queue = []; t = b.createElement(e); t.async = !0;
+      t.src = v; s = b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t, s)
+    }(window, document, 'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '3914026305515369');
+    fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=3914026305515369&ev=PageView&noscript=1" /></noscript>
+  <!-- End Meta Pixel Code -->
+</head>
+
+<body>
+  <div class="game-details">
+    <a href="../index.html" class="back-link">← Back to Home</a>
+  </div>
+
+  <header>
+    <h1>Quick Photography</h1>
+    <p>Explore and rent any of our gaming consoles.</p>
+  </header>
+
+  <section class="category">
+    <div class="all-products">
+      <div class="product-card">
+        <img src="images/alpha6100-220.jpg" alt="Sony DSLR">
+        <h3>Sony Alpha 6100 Mirrorless Camera</h3>
+        <div class="price-tag">
+          <span class="original-price">₹1800</span>
+          <span class="free-text">₹1200/day</span>
+        </div>
+        <div class="button-container">
+          <a href="photography/alpha6100.html" class="more-info">More Info</a>
+          <a href="https://wa.me/919892525821?text=I'd%20like%20to%20rent%20a%20Sony%20Alpha%206100%20camera" target="_blank">Rent
+                  Now</a>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <img src="images/alpha6100-zoom-220.jpg" alt="Sony DSLR">
+        <h3>Sony Alpha 6100 with Extra Zoom Lens</h3>
+        <div class="price-tag">
+          <span class="original-price">₹2500</span>
+          <span class="free-text">₹1800/day</span>
+        </div>
+        <div class="button-container">
+          <a href="photography/alpha6100-zoom.html" class="more-info">More Info</a>
+          <a href="https://wa.me/919892525821?text=I'd%20like%20to%20rent%20a%20Sony%20Alpha%206100%20camera%20with%20extra%20zoom%20lens" target="_blank">Rent
+                  Now</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="category">
+      <h3>Did not find what you are looking for?</h3>
+      <p>Let us know what you need and get upto 20% off on your first order</p>
+      <a href="https://wa.me/919892525821?text=I'm%20interested%20in%20renting" target="_blank">Preorder
+        on WhatsApp</a>
+    </div>
+
+    <!-- Add the remaining games below similarly... -->
+  </section>
+
+</body>
+
+<footer>
+  <div id="footer-placeholder"></div>
+
+<script>
+  fetch('/footer.html')
+    .then(res => res.text())
+    .then(html => {
+      document.getElementById('footer-placeholder').innerHTML = html;
+    });
+</script>
+</footer>
+
+</html>
